@@ -3,6 +3,9 @@ package nz.ac.auckland.zhe203.lifecycle;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -12,6 +15,16 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Log.d("LifeCycle", "++++onCreate");
+
+        final TextView et = (TextView)findViewById(R.id.textView);
+
+        et.setText("Hello World");
+        et.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                et.setText("Hello World again");
+            }
+        });
     }
 
     @Override
