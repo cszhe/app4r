@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					7C08436C1F039FB400F7CCCF = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZW74R8K79P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -262,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZW74R8K79P;
 				INFOPLIST_FILE = LifeCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nz.ac.auckland.zhe203.LifeCycle;
@@ -274,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZW74R8K79P;
 				INFOPLIST_FILE = LifeCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nz.ac.auckland.zhe203.LifeCycle;
@@ -301,6 +304,7 @@
 				7C0843811F039FB400F7CCCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
