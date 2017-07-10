@@ -11,6 +11,7 @@ import CoreMotion
 
 class ViewController: UIViewController {
 
+    let manager = CMMotionManager()
 
     @IBOutlet weak var lblAcc: UILabel!
     
@@ -18,12 +19,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let manager = CMMotionManager()
+        
         if manager.isAccelerometerAvailable {
             manager.accelerometerUpdateInterval = 0.1
-            manager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: { (data, err) in
-                if let acc = data?.acceleration {
-                    self.lblAcc.text = "X = \(acc.x) Y = \(acc.y) Z = \(acc.z)"
+            manager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data, err) in
+                if let acc = data {
+                    let disp = "X = \(acc.acceleration.x) Y = \(acc.acceleration.y) Z = \(acc.acceleration.z)"
+                    print(disp)
+                    self.lblAcc.text = disp
                 } else {
                     self.lblAcc.text = "No data"
                 }
