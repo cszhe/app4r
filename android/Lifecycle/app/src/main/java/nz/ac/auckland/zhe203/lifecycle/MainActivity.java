@@ -18,11 +18,11 @@ public class MainActivity extends Activity {
 
         final TextView et = (TextView)findViewById(R.id.textView);
 
-        et.setText("Hello World");
+        et.setText("This is old data");
         et.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                et.setText("Hello World again");
+                et.setText("The data has been changed");
             }
         });
     }
@@ -48,6 +48,8 @@ public class MainActivity extends Activity {
         Log.d("LifeCycle", "++++onPause");
     }
 
+
+
     @Override
     protected void onStop() {
         super.onStop();
@@ -68,4 +70,5 @@ public class MainActivity extends Activity {
 
         Log.d("LifeCycle", "++++onDestroy");
     }
+    
 }
